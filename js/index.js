@@ -1,10 +1,12 @@
 $(document).ready(function(){
 		setScreenClass();
 		imageSlide();
+		imageSlip();
 });
 $(window).resize(function(){
 		setScreenClass();
 		imageSlide();
+		imageSlip();
 });
 
 /**获取屏幕宽度*/
@@ -44,5 +46,17 @@ function imageSlide(){
 				mouse:'mouseover',
 				effect:'slide_l',
 				i_speed:3000
+		});
+}
+
+/**图片滑动*/
+function imageSlip(){
+		$(function() {
+				$(".head").dragend({
+						//scribe: "10px",
+						afterInitialize: function() {
+								this.container.style.visibility = "visible";
+						}
+				})
 		});
 }
