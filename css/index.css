@@ -1,0 +1,369 @@
+html,body{
+		margin: 0;
+		padding: 0;
+		font-family: "Microsoft YaHei" ! important;
+		height: 100%;
+		font-size: 62.5%;/*10 ¡Â 16 ¡Á 100% = 62.5%*/
+		overflow-x: hidden;
+}
+p{
+		margin: 0;
+		padding: 0;
+}
+span{
+		cursor: pointer;
+}
+.foot{
+		margin-left:0;
+		width: 100%;
+		background-color: #378b83;
+		height: auto;
+		opacity:0.9
+}
+.head{
+		background-image:url(../pic/head.png) ;
+		background-size:100% 100%;
+		width: 100%;
+		height: 100%;
+		position: relative;
+}
+.nav{
+		background-image:url(../pic/nav.png);
+		background-size:100% 100%;
+		width: 100%;
+		position: relative;
+		min-height: 65px;
+}
+.nav .navText{
+		width: 320px;
+		height: 65px;
+		float: left;
+		margin: 0 auto;
+		position: relative;
+		font-size: 3.0rem
+}
+
+.list{
+		cursor: pointer;
+		overflow: auto;
+		height: 100%;
+		color: #326b62;
+}
+.qrCode{
+		cursor: pointer;
+		height: 100%;
+		text-align: center;
+		color: #326b62;
+		position: relative;
+}
+.clean{
+		clear: both
+}
+.center{
+		text-align: center;
+}
+
+.copyright{
+		color: white;
+}
+.floatRight{
+		float: right;
+}
+.marginTop15{
+		margin-top: 15px;
+}
+.marginTop10{
+		margin-top: 10px;
+}
+.marginTop5{
+		margin-top: 5px;
+}
+.marginTop20{
+		margin-top: 20px;
+}
+.marginBottom20{
+		margin-bottom: 20px;
+}
+.marginLeft0{
+		margin-left: 0;
+}
+@media screen and (min-width: 960px){
+		.init{
+				margin: 0 auto;
+				padding: 0;
+				width: 960px;
+				font-size: 1.6rem;
+		}
+		.foot{
+				margin: 0 auto ;
+				width: 960px;
+				font-size: 1.6rem;
+				margin-top: 64px
+		}
+		.head{
+				margin: 0 auto;
+				width: 960px;
+		}
+		.picZoom{
+				cursor: pointer;
+				height: 410px;
+				text-align: center;
+				width: 320px;
+				float: left
+		}
+		.picZoom .box{
+				position: relative;
+				background-image:url(../pic/photoBox.png);
+				background-size:100% 100%;
+				height: 70%;
+				width: 290px;
+				margin-top: 20px;
+				margin-left: 15px;
+		}
+		.picZoom .box img{
+				width: 100%;
+				height: 100%;
+		}
+		.qrCode{
+				overflow: auto;
+				width: 320px;
+				float: left
+		}
+		.qrCode .qrCodeImg{
+				margin-top: 9px;
+				width: 180px;
+				height: 180px;
+		}
+		.qrCode span{
+				cursor: pointer;
+				line-height: 30px
+		}
+		.middleFoot{
+				margin-bottom: 0;
+		}
+		.list{
+				width: 320px;
+				float: left;
+		}
+		.list .li{
+				margin-left:60px;
+				line-height: 30px
+		}
+		.list .li .p1{
+				float: left;
+				width:151px;
+				white-space:nowrap;
+				overflow:hidden;
+				text-overflow:ellipsis;
+				margin-right:20px;
+		}
+		.list .li .p2{
+				float: left;
+				width:53px;
+				white-space:nowrap;
+				overflow:hidden;
+				text-overflow:ellipsis;
+				margin-left: 10px;
+		}
+		.list .li .airBubbleIcon{
+				float: left;
+				margin-left: 10px;
+				margin-top: 8px;
+				height: 15px;
+				width: 16px;
+		}
+    .smallFoot{
+		    display: none;
+    }
+		.nav .navText .blog,.photo{
+				margin-top: 10px;
+				position: absolute;
+				bottom: 15px;
+				left: 120px;
+		}
+		.verticalLine{
+				position: absolute;
+				right: 0;
+				top: 7px;
+				width:3px;
+				height:51px;
+		}
+    .searchInput{
+		    color: green;
+		    width: 225px;
+		    height:45px;
+		    background-color:transparent;
+		    border:1px;
+		    border-bottom-style:none;
+		    border-top-style:none;
+		    border-left-style:none;
+		    border-right-style:none;
+		    font-size: 2.5rem
+    }
+		.navSearch{
+				width: 320px;
+				height: 65px;
+				float: left;
+				position: relative;
+		}
+    .searchBox{
+		    position: absolute;
+		    left: 44px;
+		    top: 7px;
+		    width: 231px;
+		    height:51px;
+		    background-color: RGB(213, 198, 189);
+    }
+    .magnifierImg{
+		    position: absolute;
+		    left: 190px;
+		    top:8px;
+		    width:36px;
+		    height:36px;
+		    cursor: pointer;
+    }
+    .navList{
+		    display: none;
+    }
+}
+
+.textBreak{
+		word-break: break-all;
+		word-wrap:break-word;
+}
+
+
+@media screen and (max-width: 960px){
+		.init{
+				overflow: auto;
+				font-size: 1.6rem;
+				overflow-x: hidden;
+		}
+		.foot{
+				height: auto;
+				width: 100%;
+				font-size: 1.6rem;
+		}
+		.init{
+				margin: 0;
+				padding: 0;
+				width: 100%;
+		}
+		.list{
+				width: 100%;
+				float: left;
+		}
+		.list .li{
+				font-size: 1.6rem;
+				line-height: 40px;
+		}
+		.list .li .p1{
+				float: left;
+				width:64%;
+				white-space:nowrap;
+				overflow:hidden;
+				text-overflow:ellipsis;
+				margin-left:20px;
+		}
+		.list .li .p2{
+				float: left;
+				width:25px;
+				white-space:nowrap;
+				overflow:hidden;
+				text-overflow:ellipsis;
+				margin-left: 10px;
+				margin-right:20px;
+		}
+		.list .li .airBubbleIcon{
+				float: left;
+				margin-left: 10px;
+				margin-top: 12px;
+				height: 15px;
+				width: 15px;
+		}
+
+		.picZoom{
+				display: none;
+		}
+		.qrCode{
+				font-size: 1.6rem;
+				line-height: 30px;
+				clear: both;
+				margin: 0 auto;
+				width: 100%;
+		}
+		.qrCode .qrCodeImg{
+				margin-top: 9px;
+				width: 150px;
+				height: 150px;
+		}
+    .smallFoot{
+		    margin:0 auto;
+		    height: 50px;
+		    width: 100%;
+		    background-color: #378b83;
+		    text-align: center;
+		    opacity:0.9;
+    }
+    .span1 , .span2 , .span3 , .span7 , .span8 , .span10 {
+				display: none;
+		}
+		.nav .navText {
+				display: none;
+		}
+		.verticalLine{
+				display: none;
+		}
+		.navList{
+				display: block;
+				position: absolute;
+				right: 10px;
+				width: 51px;
+				height: 51px;
+				top: 7px;
+				background-color: RGB(213, 198, 189);
+		}
+		.searchInput{
+				color: green;
+				width: 145px;
+				height:45px;
+				background-color:transparent;
+				border:1px;
+				border-bottom-style:none;
+				border-top-style:none;
+				border-left-style:none;
+				border-right-style:none;
+				font-size: 2.5rem
+		}
+		.navSearch{
+				width: 320px;
+				height: 65px;
+				float: right;
+				position: relative;
+		}
+		.searchBox{
+				position: absolute;
+				left: 55px;
+				top: 7px;
+				width: 200px;
+				height:51px;
+				background-color: RGB(213, 198, 189);
+		}
+		.magnifierImg{
+				position: absolute;
+				left: 150px;
+				top:8px;
+				width:36px;
+				height:36px;
+				cursor: pointer;
+		}
+    .navListImg{
+		    width:31px;
+		    height:27px;
+		    position: absolute;
+		    top:12px;
+		    left: 10px
+    }
+}
+
+

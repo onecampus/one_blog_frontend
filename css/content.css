@@ -1,0 +1,381 @@
+body{
+	background-color: rgb(247, 247, 247);
+	margin: 0;
+	padding: 0;
+	/*font: 1em/150% Arial,Helvetica,sans-serif;*/
+	font: 1em/150% "Microsoft YaHei";
+}
+
+#page{
+    margin: 0 auto;
+    /*padding: 5px;*/
+    width: 960px;
+}
+
+/*header part*/
+header {
+    height: 75px;
+    background: url(../pic/nav-background.png);
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 8px 10px -5px gray;
+}
+
+header #logo, #blog, #photo, #search{
+	position: absolute;
+}
+
+/*logo part*/
+header #logo img{
+	width: 25%;
+}
+
+header #logo{
+  left: 8%;
+  top: 20%;
+}
+
+header #logo img{
+  max-width: 25%
+}
+
+/*blog part*/
+header #blog{
+  left: 35%;
+  top: 30%;
+}
+
+/*photo part*/
+header #photo{
+  left: 50%;
+  top: 30%;
+}
+
+/*search part*/
+header #search{
+  background: url(../pic/search.png);
+  right: 8%;
+  top: 25%;
+}
+
+header #search input{
+  float: left;
+}
+
+header #search input[type="image"]{
+  width: 30px;
+}
+
+header #search input[type="text"]{
+  border: none;
+  outline: none;
+  padding: 7px 0;
+  margin-left: 10px;
+  background: transparent;
+  color: RGB(70, 137, 122);
+  font-weight: bolder;
+}
+
+/*article part*/
+article{
+    float: left;
+    width: 600px;
+    background-color: transparent;
+    z-index: 1;
+}
+
+article .info .main img{
+	width: 100%;
+	float: left;
+	margin-top: 1%;
+	z-index: -1;
+}
+article .info{
+	/*border: 1px solid black;*/
+	width: 95%;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 5%;
+	background-color: transparent;
+}
+
+article .info .title{
+	position: absolute;
+	left: 5%;
+	top: 1%;
+  color: RGB(59, 114, 101);
+}
+
+article .info .content{
+	border: 1px solid gray;
+	margin-left: 1.7%;
+	box-shadow: 0 8px 10px -5px gray;
+	background-color: transparent;
+  padding: 10%;
+}
+
+article .show{
+  text-align: right;
+  color: RGB(59, 114, 101);
+}
+
+article .show div{
+  display: inline-block;
+  /*text-align: right;*/
+}
+
+article .show .icon img{
+  width: 19px;
+}
+
+/*sidebar part*/
+#sidebar {
+    float: right;
+    width: 250px;
+    background-color: RGB(98, 167, 149);
+    box-shadow: 0 8px 10px -5px gray;
+    margin-right: 5%;
+}
+
+#sidebar #qr-code img{
+	width: 70%;
+	margin-top: 5%;
+}
+
+#sidebar #qr-code{
+	text-align: center;
+}
+
+#sidebar a{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	margin: 5%;
+	color: white;
+	font-weight: bold;
+}
+
+/*sidebar-2*/
+/*sidebar-2 最近文章部分*/
+#sidebar-2{
+  position: relative;
+  overflow: hidden;
+  float: right;
+  /*box-shadow: 0 8px 10px -5px gray;*/
+  margin-top: 5%;
+  margin-right: 5%
+}
+
+#sidebar-2 img{
+    /*position: absolute;*/
+    float: left;
+}
+
+#sidebar-2 div{
+    background-color: white;
+    margin-bottom: 10%;
+    display: block;
+    height: 200px;
+    margin-left: 5%;
+    /*position: absolute;*/
+    box-shadow: 0 8px 10px -5px gray;
+    border-right: 1px solid #ccc;
+}
+
+#sidebar-2 #last-paper{
+    position: absolute;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+/*footer part*/
+footer {
+    clear: both;
+    text-align: center;
+    height: 75px;
+}
+
+/*media query part*/
+@media screen and (max-width: 980px) {
+    #page{
+        width: auto;
+    }
+
+    article{
+        width: 70%;
+    }
+
+    #sidebar{
+        width: 20%;
+    }
+
+    #sidebar-2{
+      width: 20%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #page{
+        width: auto;
+        margin: 0 5px;
+        /*margin: 0;*/
+    }
+
+    header #mob-nav{
+    	visibility: visible;
+    }
+
+    header{
+    	height: 65px;
+    }
+
+    header #logo{
+      /*width: 100%;*/
+      top: 30%;
+    }
+
+    article{
+        width: 100%;
+    }
+
+    article .info .main .left-title-bg{
+      display: none;
+    }
+
+    article .info .title {
+    left: 12%;
+    position: absolute;
+    top: -1.5%;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+    article .info .content{
+      margin-left: 1.7%;
+      box-shadow: none;
+      padding: 10%;
+      border: none;
+      /*position: absolute;*/
+      position: relative;
+    }
+
+    article .info .show{
+      position: absolute;
+      top: 3%;
+      right: 5%;
+    }
+
+    #sidebar{
+        display: none;
+    }
+
+    #sidebar-2{
+      display: none;
+    }
+
+    header #blog, #photo{
+     display: none;
+   }
+
+   header #search{
+    right: 19%;
+    background: none;
+    z-index: 999;
+  }
+
+  header #search input[type="text"]{
+    padding-left: 13px;
+    padding-right: 5px;
+    width: 100px;
+    border-radius: 25px;
+  }
+
+  header #search input[type="text"]:focus{
+    background-color: RGB(98, 167, 149);
+    color: white;
+  }
+
+    header #mob-nav{
+    	display: block;
+    }
+
+    article .info .main .title{
+      font-size: 1.1em;
+      /*top: -1.5%;*/
+      top: 0.5%;
+    }
+}
+
+/*modify part*/
+article, #sidebar, footer{
+	margin-top: 5%;
+}
+
+header #mob-nav{
+	visibility: visible;
+	position: absolute;
+	text-align: right;
+	right: 5%;
+	z-index: 1;
+}
+
+header #mob-list{
+	height: 65px;
+	float: right;
+	padding: 0 10px;
+	opacity: 0.8;
+	z-index: 999;
+}
+
+header #mob-choice{
+	float: right;
+	clear: right;
+	background: RGB(59, 114, 101);
+	visibility: hidden;
+	opacity: 0.8;
+}
+
+header #mob-nav #mob-choice #mob-blog img{
+  width: 67%;
+ }
+
+ header #mob-nav #mob-choice #mob-photo img{
+  width: 82%;
+ }
+
+ header #mob-nav #mob-choice div{
+   /*padding: 10%;*/
+   padding-top: 15%;
+   padding-bottom: 10%;
+   text-align: center;
+ }
+
+ /*mob-choice line*/
+ header #mob-nav #mob-choice #mob-blog{
+  border-bottom: 1px solid RGB(176, 198, 193);
+ }
+
+header #mob-nav #mob-choice div{
+	padding: 10%;
+}
+
+header #mob-list a{
+	line-height: 80px;
+}
+
+
+/*go to top*/
+#gotop{
+    display:none;
+    cursor: pointer;
+    width: 60px;
+    height: 55px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    background: url(../pic/to-top.png);
+}
+/*----------*/
+#mob-nav{
+	display: none;
+}
