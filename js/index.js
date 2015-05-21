@@ -1,8 +1,10 @@
 $(document).ready(function(){
 		setScreenClass();
+		imageSlide();
 });
 $(window).resize(function(){
 		setScreenClass();
+		imageSlide();
 });
 
 /**获取屏幕宽度*/
@@ -32,4 +34,15 @@ function setScreenClass(){
 
 		/**设置head背景图高度*/
 		$(".head").css("height",sw/2.7 + "px");
+}
+
+/**图片轮播*/
+function imageSlide(){
+		$('.carouselBox').binSlide({
+				img_box:'.carouselImg',
+				btn_box:".carouselBtn",
+				mouse:'mouseover',
+				effect:'slide_l',
+				i_speed:3000
+		});
 }

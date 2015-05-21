@@ -213,8 +213,8 @@
 		}
 		.nav .navSearch .searchInput{
 				color: green;
-				width: 225px;
-				height:45px;
+				width: 189px;
+				height:50px;
 				background-color:transparent;
 				border:1px;
 				border-bottom-style:none;
@@ -307,7 +307,7 @@
 		.nav .navSearch .searchInput{
 				color: green;
 				width: 145px;
-				height:45px;
+				height:50px;
 				background-color:transparent;
 				border:1px;
 				border-bottom-style:none;
