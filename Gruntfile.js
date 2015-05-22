@@ -39,8 +39,26 @@ module.exports = function(grunt) {
 								}
 						},
 						files: ['Gruntfile.js', 'js/index.js']
+				},
+				htmlhint: {
+						build: {
+								options: {
+										'tagname-lowercas': true,
+										'attr-lowercase': true,
+										'attr-value-double-quotes': true,
+										'attr-value-not-empty': true,
+										'attr-no-duplication': true,
+										'doctype-first': true,
+										'tag-pair': true,
+										'tag-self-close':true,
+										'id-unique':true,
+										'src-not-empty':true,
+										'spec-char-escape':true
+								},
+								src: ['index.html']
+						}
 				}
 		});
 		require('load-grunt-tasks')(grunt);
-		grunt.registerTask('default', ['jshint']);
+		grunt.registerTask('default', ['jshint','htmlhint']);
 };
