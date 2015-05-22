@@ -1,11 +1,11 @@
 $(document).ready(function(){
 		setScreenClass();
-		imageSlide();
 		imageSlip();
+		showNavList();
+		imageSlide();
 });
 $(window).resize(function(){
 		setScreenClass();
-		imageSlide();
 		imageSlip();
 });
 
@@ -19,16 +19,6 @@ function getBrowserWidth(){
 		return 0;
 }
 
-/**获取屏幕高度*/
-function getBrowserHeight(){
-		if (window.innerHeight){
-				return window.innerHeight;}
-		else if (document.documentElement && document.documentElement.clientHeight !== 0){
-				return document.documentElement.clientHeight;	}
-		else if (document.body){return document.body.clientHeight;}
-		return 0;
-}
-
 /**动态设置页面相关的css属性*/
 function setScreenClass(){
 		var sw = getBrowserWidth();
@@ -36,6 +26,12 @@ function setScreenClass(){
 
 		/**设置head背景图高度*/
 		$(".head").css("height",sw/2.7 + "px");
+
+		if(sw==960){
+				$(".navText").css("display","block");
+		}else{
+				$(".navText").css("display","none");
+		}
 }
 
 /**图片轮播*/
@@ -59,4 +55,16 @@ function imageSlip(){
 						}
 				})
 		});
+}
+
+/**小于960px时候点击显示隐藏导航按钮*/
+function showNavList(){
+		$(".navList").on("click",function(){
+				var	navText=$(".navText");
+				if(navText.css("display")=="none"){
+						navText.css("display","block")
+				}else{
+						navText.css("display","none")
+				}
+		})
 }

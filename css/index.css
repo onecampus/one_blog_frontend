@@ -33,14 +33,6 @@
 		position: relative;
 		min-height: 65px;
 }
-.nav .navText{
-		width: 320px;
-		height: 65px;
-		float: left;
-		margin: 0 auto;
-		position: relative;
-		font-size: 3.0rem
-}
 
 /*博客文章列表*/
 .list{
@@ -182,8 +174,14 @@
 		}
 
 		/*上导航栏*/
-		.nav .navList{
-				display: none;
+		.nav .navText{
+				width: 320px;
+				height: 65px;
+				float: left;
+				margin: 0 auto;
+				position: relative;
+				font-size: 3.0rem;
+				display: block;
 		}
 		.nav .navText .blog,.photo{
 				margin-top: 10px;
@@ -232,7 +230,9 @@
 				border-right-style:none;
 				font-size: 2.5rem
 		}
-
+		.nav .navList{
+				display: none;
+		}
 }
 
 @media screen and (max-width: 960px){
@@ -348,6 +348,7 @@
 				cursor: pointer;
 		}
 		.nav .navList{
+				cursor: pointer;
 				display: block;
 				position: absolute;
 				right: 10px;
@@ -365,9 +366,31 @@
     }
 		.nav .navText {
 				display: none;
+				z-index: 1000;
+				background-color: whitesmoke;
+				position: absolute;
+				top:65px;
+				width: 100%;
+				font-size: 2.5rem;
+				float: right;
+				min-height: 40px;
+		}
+		.nav .top{
+				top:105px;
 		}
 		.nav .navText .verticalLine{
 				display: none;
+		}
+		.nav .navText .blog{
+				float: right;
+				margin-right: 10px;
+				margin-top: 5px;
+				cursor: pointer;
+		}
+		.nav .navText .photo{
+				float: right;
+				margin-right: 10px;
+				cursor: pointer;
 		}
 
 		/*隐藏部分底部栏说明*/
