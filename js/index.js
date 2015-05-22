@@ -1,14 +1,3 @@
-$(document).ready(function(){
-		setScreenClass();
-		imageSlip();
-		showNavList();
-		imageSlide();
-});
-$(window).resize(function(){
-		setScreenClass();
-		imageSlip();
-});
-
 /**获取屏幕宽度*/
 function getBrowserWidth(){
 		if (window.innerWidth){
@@ -22,49 +11,60 @@ function getBrowserWidth(){
 /**动态设置页面相关的css属性*/
 function setScreenClass(){
 		var sw = getBrowserWidth();
-		if(sw>=960)(sw=960);
+		if(sw>=960){sw=960;}
 
 		/**设置head背景图高度*/
-		$(".head").css("height",sw/2.7 + "px");
+		$('.head').css('height',sw/2.7 + 'px');
 
-		if(sw==960){
-				$(".navText").css("display","block");
+		if(sw===960){
+				$('.navText').css('display','block');
 		}else{
-				$(".navText").css("display","none");
+				$('.navText').css('display','none');
 		}
 }
 
 /**图片轮播*/
 function imageSlide(){
 		$('.carouselBox').binSlide({
-				img_box:'.carouselImg',
-				btn_box:".carouselBtn",
+				imgBox:'.carouselImg',
+				btnBox:'.carouselBtn',
 				mouse:'mouseover',
 				effect:'slide_l',
-				i_speed:3000
+				iSpeed:3000
 		});
 }
 
 /**图片滑动*/
 function imageSlip(){
 		$(function() {
-				$(".head").dragend({
+				$('.head').dragend({
 						//scribe: "10px",
 						afterInitialize: function() {
-								this.container.style.visibility = "visible";
+								this.container.style.visibility = 'visible';
 						}
-				})
+				});
 		});
 }
 
 /**小于960px时候点击显示隐藏导航按钮*/
 function showNavList(){
-		$(".navList").on("click",function(){
-				var	navText=$(".navText");
-				if(navText.css("display")=="none"){
-						navText.css("display","block")
+		$('.navList').on('click',function(){
+				var	navText=$('.navText');
+				if(navText.css('display')==='none'){
+						navText.css('display','block');
 				}else{
-						navText.css("display","none")
+						navText.css('display','none');
 				}
-		})
+		});
 }
+
+$(document).ready(function(){
+		setScreenClass();
+		imageSlip();
+		showNavList();
+		imageSlide();
+});
+$(window).resize(function(){
+		setScreenClass();
+		imageSlip();
+});
