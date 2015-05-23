@@ -119,13 +119,12 @@
 		.picZoom .carouselBox .carouselBtn span{
 				display: inline-block;width:12px;height:12px;background:url(../pic/cir.png) center center no-repeat;
 		}
-		.picZoom .carouselBox .carouselBtn span:hover,.picZoom .carouselBox .carouselBtn span.onbtn{background:url(../pic/cir_h.png)}
+		.picZoom .carouselBox .carouselBtn span:hover,.picZoom .carouselBox .carouselBtn .onbtn{background:url(../pic/cir_h.png)}
 
 		/*ЖўЮЌТы*/
 		.qrCode{
 				overflow: auto;
 				width: 320px;
-				float: left
 		}
 		.qrCode .qrCodeImg{
 				margin-top: 9px;
@@ -223,11 +222,7 @@
 				width: 189px;
 				height:50px;
 				background-color:transparent;
-				border:1px;
-				border-bottom-style:none;
-				border-top-style:none;
-				border-left-style:none;
-				border-right-style:none;
+				border:0 none;
 				font-size: 2.5rem
 		}
 		.nav .navList{
@@ -258,7 +253,6 @@
 				float: left;
 		}
 		.list .li{
-				font-size: 1.6rem;
 				line-height: 40px;
 		}
 		.list .li .p1{
@@ -296,7 +290,6 @@
 
 		/*ЖўЮЌТы*/
 		.qrCode{
-				font-size: 1.6rem;
 				line-height: 30px;
 				clear: both;
 				margin: 0 auto;
