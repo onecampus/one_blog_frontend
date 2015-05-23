@@ -65,6 +65,20 @@ module.exports = function(grunt) {
 								'floats':false
 						},
 						files: ['css/global.css','css/index.css']
+				},
+				watch:{
+						scripts: {
+								files: '**/*.js',
+								tasks: 'jshint'
+						},
+						css:{
+								files: '**/*.css',
+								tasks: 'csslint'
+						},
+						html:{
+								files: '**/*.html',
+								tasks: 'htmlhint'
+						}
 				}
 		});
 		require('load-grunt-tasks')(grunt);
