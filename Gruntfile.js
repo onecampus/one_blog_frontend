@@ -57,8 +57,16 @@ module.exports = function(grunt) {
 								},
 								src: ['index.html']
 						}
+				},
+				csslint:{
+						options: {
+								'box-sizing':false,
+								'box-model':false,
+								'floats':false
+						},
+						files: ['css/global.css','css/index.css']
 				}
 		});
 		require('load-grunt-tasks')(grunt);
-		grunt.registerTask('default', ['jshint','htmlhint']);
+		grunt.registerTask('default', ['jshint','htmlhint','csslint']);
 };
